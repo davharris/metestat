@@ -1,9 +1,11 @@
 ---
-title: "Scaling up abundance with confidence"
+title: "Scaling up abundance with confidence (intervals)"
 author: "David J. Harris"
 date: "August 14, 2015"
 output: html_document
 ---
+
+***Update**: This is all incorrect, since I misread Harte (2008).  The geometric distribution is only used when the total abundance of the species at the largest spatial scale is already known. I won't delete the repository in case it's useful to someone some day, but don't believe anything you read in it.
 
 
 ```r
@@ -133,3 +135,4 @@ If there's spatial heterogeneity, then we won't have the same $p$ at all sites. 
 
 * Did I make any boneheaded mistakes?
 * What's the *joint* distribution of $n$ values for different species in a given area $A$, assuming $S_0$ is known/fixed and we've marginalized out $E$? This would make a useful prior for the kinds of multi-species distribution modeling I've been working on.
+* I feel like there's a disconnect in my mind regarding when to expect geometric versus negative binomial distributions.  The math I'm using seems to indicate that one large quadrat would have a geometrically distributed $n$, but cutting it up into lots of tiny quadrats (small $A$) and summing them up would lead to negative binomially distributed $n$. I guess Harte (2008) says that the slope of the geometric distribution should change with the value of $A$, but it doesn't seem to allow for the same flexibility we get with the negative binomial.  So I'm still confused.
