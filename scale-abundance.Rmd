@@ -27,7 +27,7 @@ curve(dgeom(7, x), from = .0001, xlab = "p", ylab = "likelihood")
 I'm pretty sure the likelihood is proportional to a beta distribution (because conjugate priors). Trial and error indicates that it has $\mathrm{shape1} = 2$ and $\mathrm{shape2} = n + 1$. Interestingly, this distribution's mean is *not* just $1/n$, which is what one might have expected (it's somewhat closer to $0.5$, especially when $n$ is small).
 
 ```{r}
-Z = exp(5.04985600724954) # Proportionality constant, found empirically
+Z = exp(4.276666) # Proportionality constant, found empirically
 
 curve(dgeom(7, x), from = .0001, xlab = "p", ylab = "likelihood", lwd = 4)
 curve(dbeta(x, shape1 = 2, shape2 = 7 + 1) / Z, add = TRUE, col = "red", lwd = 2)

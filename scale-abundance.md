@@ -35,7 +35,7 @@ I'm pretty sure the likelihood is proportional to a beta distribution (because c
 
 
 ```r
-Z = exp(5.04985600724954) # Proportionality constant, found empirically
+Z = exp(4.276666) # Proportionality constant, found empirically
 
 curve(dgeom(7, x), from = .0001, xlab = "p", ylab = "likelihood", lwd = 4)
 curve(dbeta(x, shape1 = 2, shape2 = 7 + 1) / Z, add = TRUE, col = "red", lwd = 2)
